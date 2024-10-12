@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+img {
+    width: 200px;
+    height: auto;
+}
+
+.btn-primary {
+    background-color: #191970;
+    color: #fff;
+    border-color: #007bff;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.btn-primary:active {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* --- メディアクエリでデバイスごとのスタイル変更 --- */
+
+/* スマートフォン用 (幅が768px未満) */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 15px; /* スマホではフォントサイズを小さくする */
+    }
+
+    .btn-primary {
+        font-size: 20px; /* ボタンのフォントサイズを縮小 */
+    }
+}
