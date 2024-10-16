@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\WorktimeController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +21,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [EmployeeController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
+
+
+Route::get('/employees/qr', [EmployeeController::class, 'showQr'])
+    ->middleware(['auth', 'verified'])
+    ->name('employees.qr');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

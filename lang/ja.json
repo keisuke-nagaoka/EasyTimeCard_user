@@ -137,5 +137,8 @@
     "per page": "毎ページ",
     "results": "件",
     "to": "から",
-    "Showing": "表示中："
+    "Showing": "表示中：",
+    "Show_QR": "QRコード表示",
+    "Employee_show": "勤務時間",
+    "QR": "従業員QRコード"
 }
